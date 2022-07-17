@@ -1,0 +1,38 @@
+####################################################################
+Por que debo siempre crear un POJO para cada request?
+####################################################################
+
+POJO son las iniciales de "Plain Old Java Object", que puede interpretarse como "Un objeto Java Plano Antiguo". Un POJO es una instancia de una clase que no extiende ni implementa nada en especial. Para los programadores Java sirve para enfatizar el uso de clases simples y que no dependen de un framework en especial. Este concepto surge en oposición al modelo planteado por los estándares EJB anteriores al 3.0, en los que los Enterprise JavaBeans (EJB) debían implementar interfaces especiales.
+
+Por ejemplo, un Controller de Spring tiene que extender de SimpleFormController, e implementar los métodos abstractos de ese tipo: por eso, no es un POJO. Un Servlet, tiene que extender de HttpServlet por lo que tampoco es un POJO. En cambio, si defines una clase Cliente con atributos y unas cuantas operaciones, tienes un simple y modesto POJO.
+
+####################################################################
+Tengo librerias que me ayudan a convertir entidades en POJOS?
+####################################################################
+
+Jackson
+
+Jackson es un conjunto de herramientas imprescindible para el procesamiento de datos en Java. Incluye una librería interpretadora / generadora de JSON en tiempo real (JSON es actualmente el formato por excelencia para la transmisión de información entre cliente y servidor). Asimismo, dispone de una librería de Data-Binding, que convierte POJO en JSON y viceversa, y módulos para el procesamiento de datos en formatos como Avro, BSON, CBOR, CSV, Smile, Java Properties, Protobuf, XML o YAML. Además, admite otros tipos de datos ampliamente utilizados, como Guava, Joda y PCollections. Es modular, con un núcleo con funcionalidades básicas y numerosas extensiones.
+
+
+####################################################################
+Cual es el patron Factory?
+####################################################################
+
+El patrón de diseño Factory Method nos permite la creación de un subtipo determinado por medio de una clase de Factoría, la cual oculta los detalles de creación del objeto.
+
+El objeto real creados es enmascarado detrás de una interface común entre todos los objetos que pueden ser creado, con la finalidad de que estos pueden variar sin afectar la forma en que el cliente interactúa con ellos. 
+
+Es normal que un Factory pueda crear varios subtipos de una determinada interface y que todos los objetos concretos fabricados hagan una tarea similar pero con detalles de implementación diferentes. 
+
+La intención del Factory Method es tener una clase a la cual delegar la responsabilidad de la creación de los objetos, para que no sea el mismo programador el que decida que clase instanciará, si no que delegará esta responsabilidad al Factory confiando en que este le regresará la clase adecuada para trabajar.
+
+Lo anterior puede resultado un poco absurdo, pues para que necesitaría el programador ayuda de una clase para crear un objeto, en su lugar puede hacer simplemente un new y listo, tiene la instancia creada, sin embargo, el patrón Factory method se utiliza para casos en los que no se sabe en tiempo de diseño que subtipo vamos a necesitar, y en su lugar, definimos eso en la base de datos, en un archivo de configuración, o simplemente por medio de alguna condición en tiempo de ejecución podemos determinar que clase se utilizará.
+
+####################################################################
+Cuando usar los enum es conveniente?
+####################################################################
+
+####################################################################
+Puedo convertir los enum a diferentes objetos?
+####################################################################

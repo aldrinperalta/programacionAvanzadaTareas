@@ -1,0 +1,66 @@
+#################################################
+Investigar sobre principios SOLID (qué es, definición de cada principio)
+#################################################
+
+Los principios SOLID son 5 principios básicos de la programación orientada a objetos. Estos fueron desarrollados por Robert C. Martin (Uncle Bob) en el año 2000. Los principios SOLID tienen como objetivo eliminar las malas practicas en el diseño y desarrollo de software. La aplicación de estos principios ayudan al desarrollador a escribir un código mantenible, escalable y robusto.
+
+Los principios SOLID son:
+
+Single Responsibility Principle (Principio de responsabilidad única).
+Open/Closed Principle (Principio de abierto/cerrado). Liskov Substitution Principle (Principio de sustitución de Liskov).
+Interface Segregation Principle (Principio de segregación de interfaces).
+Dependency Inversion Principle (Principio de inversión de dependencia).
+El termino SOLID es un acrónimo de los 5 principios.
+
+Principio de Responsabilidad Única
+SRP o Principio de responsabilidad única se refiere a que una clase, método o modulo debería de tener solamente una responsabilidad, es decir, solamente una razón para cambiar. En ocasiones sucede que codificamos clases/métodos/módulos que hacen muchas cosas a la vez, por ejemplo, se encargan de la lógica de negocio, de la persistencia de datos, del registro en el log, etc. El principio de responsabilidad única nos ayuda a refactorizar este código y separar la responsabilidades de clases/métodos/módulos para que tengan solo una responsabilidad.
+
+La desventaja de que una unidad de código tenga más de una responsabilidad, es que cuando se introduce un cambio para alguna de las responsabilidades se puede afectar el funcionamiento de las otras. El objetivo de SRP es la separación de responsabilidades y evitar que otras responsabilidades se vean afectadas por cambios ajenas a ellas.
+
+Principio de Responsabilidad Única a Nivel de Método
+Es importante hacer énfasis que el principio de responsabilidad única se refiere a una unidad de código, el cual puede ser a nivel de modulo, clase o método. Hago énfasis en este punto porque es muy común ver métodos que realizan varias acciones, incluso he visto métodos de 500 líneas de código. Por ejemplo, he visto métodos que se encargan de registrar los parámetros en el log, realizar los cálculos correspondientes a la función y, por último, guardar el resultado en la base de datos. El problema de estos métodos es que, además de ser poco escalables y difíciles de mantener, no se pueden probar correctamente mediante pruebas unitarias. La aplicación del principio de responsabilidad única a nivel de método permite que podamos escribir métodos pequeños, con una sola responsabilidad, escalables, mantenibles y fáciles probar mediante pruebas unitarias.
+
+
+
+#################################################
+¿Qué es el happy path?
+#################################################
+
+La prueba Happy-path es un tipo de prueba de software que utiliza datos de entrada conocidos. y produce una salida esperada. También conocido como prueba del camino dorado o del día soleado, el enfoque del camino feliz es estrictamente escrito. El camino feliz no duplica las condiciones del mundo real y solo verifica que la funcionalidad requerida esté en su lugar y funcione correctamente. Si existen alternativas válidas, el camino feliz se identifica como el escenario predeterminado o la alternativa positiva más probable sin condiciones excepcionales o de error.
+
+Los defensores de las pruebas de ruta feliz creen que es posible que los desarrolladores se concentren en una ruta óptima y creen la funcionalidad requerida dejando espacio para errores en la producción. Sin embargo, otros están totalmente en desacuerdo. CLos rituales de las pruebas del camino feliz afirman que debido a Los escenarios del camino feliz excluyen las excepciones y los errores humanos, existe la posibilidad de dejando espacios para nulos, valores incorrectos y varios errores de validación. Quizás el argumento más fuerte en contra de las pruebas de ruta feliz es que probar solo escenarios de UX bien definidos puede proporcionar una ilusión de seguridad que no existe en la vida real.
+
+En caso de uso análisis, solo existe un camino feliz, sin embargo, hay muchos escenarios alternativos adicionales que pueden tener resultados válidos. Pensar en varios escenarios antes del desarrollo de software puede ahorrarle dinero a la empresa y dar como resultado características del producto que facilitan una mejor experiencia de usuario (UX).
+
+#################################################
+¿Qué es un escenario de prueba?
+#################################################
+
+A Test Scenario se define como cualquier funcionalidad que se pueda probar. También es llamado Condición de prueba o Posibilidad de prueba. Como evaluador, debe ponerse en el lugar del usuario final y descubrir los escenarios del mundo real y los casos de uso de la aplicación bajo prueba.
+
+Pruebas de escenarios
+Scenario Testing en las pruebas de software es un método en el que se utilizan escenarios reales para probar la aplicación de software en lugar de casos de prueba. El propósito de las pruebas de escenarios es probar escenarios de extremo a extremo para un problema complejo específico del software. Los escenarios ayudan de una manera más fácil a probar y evaluar problemas complicados de extremo a extremo.
+
+#################################################
+¿Por qué se escribe un escenario de prueba?
+#################################################
+
+Los escenarios de prueba se crean por las siguientes razones,
+
+La creación de escenarios de prueba garantiza una cobertura de prueba completa
+Los escenarios de prueba pueden ser aprobados por varias partes interesadas, como Business Analyst, Developers, Customers para garantizar que la aplicación bajo prueba se pruebe a fondo. Garantiza que el software funcione para los casos de uso más comunes.
+Sirven como una herramienta rápida para determinar el esfuerzo de trabajo de prueba y, en consecuencia, crear una propuesta para el cliente u organizar la fuerza de trabajo.
+
+Ayudan a determinar las transacciones de extremo a extremo más importantes o el uso real de las aplicaciones de software.
+Para estudiar el funcionamiento integral del programa, el escenario de prueba es fundamental.
+
+
+#################################################
+Investigar sobre las buenas prácticas para escribir casos de prueba 
+#################################################
+
+Cada escenario de prueba debe vincularse a un mínimo de un requisito o historia de usuario según la metodología del proyecto.
+Antes de crear un escenario de prueba que verifique varios requisitos a la vez, asegúrese de tener un escenario de prueba que verifique ese requisito de forma aislada.
+
+Evite crear escenarios de prueba demasiado complicados que abarquen varios requisitos.
+La cantidad de escenarios puede ser grande y es costoso ejecutarlos todos. En función de las prioridades del cliente, ejecute solo los escenarios de prueba seleccionados

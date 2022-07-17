@@ -1,0 +1,81 @@
+########################################################
+LISTAR LAS VENTAJAS DEL USO DE LOS EMUM SOBRE LAS CONSTANTES
+########################################################
+
+Un enumerado (o Enum) es una clase "especial" (tanto en Java como en otros lenguajes) que limitan la creación de objetos  a los especificados explícitamente en la implementación de la clase. La única limitación que tienen los enumerados respecto a una clase normal es que si tiene constructor, este debe de ser privado para que no se puedan crear nuevos objetos.
+
+Es muy importante que tengáis claro que los enumerado no son Strings (aunque pueden serlo), sino que son objeto de una clase que solo son instanciables desde la clase que se implementa y que no se puede crear un objeto de esa clase desde cualquier otro lado que no sea dentro de esa clase. Es muy común (sobre todo cuando se esta aprendiendo que son los enumerados) que se interprete que un enumerado es una lista finita de Strings y en realidad es una lista finita de objetos de una determinada clase con sus atributos, constructor y métodos getter aunque estos sean privados.
+
+En resumen esto es todo lo importante que debes saber sobre los enumerados en Java. En otros lenguajes de programación los enumerados pueden tener más métodos heredados, pero el concepto fundamental de un enumera es que son unos objetos (y no Strings; aunque es si en java un String es un clase y no un dato atómico) definidos en la misma clase con constructor privado y si tiene atributos estos solo tienen que tener métodos "getter" para obtener el valor del atributo.
+
+########################################################
+CUAL ES EL PRINCIPIO DE LA UNICA RESPONSABILIDAD EN SOLID?
+########################################################
+Son un conjunto de principios aplicables a la Programación Orientada a Objetos que, si los usas correctamente, te
+ ayudarán a escribir software de calidad en cualquier lenguaje de programación orientada a objetos. Gracias a ellos,
+ crearás código que será más fácil de leer, testear y mantener.
+
+Los principios en los que se basa SOLID son los siguientes:
+
+Principio de Responsabilidad Única (Single Responsibility Principle)
+Principio Open/Closed (Open/Closed Principle)
+Principio de Sustitución de Liskov (Liskov Substitution Principle)
+Principio de Segregación de Interfaces (Interface Segregation Principle)
+Principio de Inversión de Dependencias (Dependency Inversion Principle)
+Estos principios son la base de mucha literatura que encontrarás en torno al desarrollo de software: muchas arquitecturas
+se basan en ellos para proveer flexibilidad, el testing necesita confiar en ellos para poder validar partes de código de
+forma independiente, y los procesos de refactorización serán mucho más sencillos si se cumplen estas reglas. Así que es
+muy conveniente que asimiles bien estos conceptos.
+
+Las ventajas de utilizar los Principios SOLID son innumerables, ya que nos aportan todas esas características que siempre queremos ver en un software de calidad.
+
+En cada uno de los principios nos iremos centrando en qué aportan específicamente, pero es interesante hacer un resumen general de lo que conseguiremos con ellos:
+
+Software más flexible: mejoran la cohesión disminuyendo el acoplamiento
+Los conceptos de cohesión y acoplamiento merecen un artículo a parte, pero a grandes rasgos lo que buscamos de un buen código es que sus clases puedan trabajar de forma independiente y que el cambio de uno afecte lo menos posible al resto.
+
+Obviamente cuando dos clases se relacionan entre sí para trabajar juntas (y esto tiene que ocurrir sí o sí), va a existir un acoplamiento entre ellas.
+
+Pero existen distintos niveles de acoplamiento, y gracias a algunos de los Principios SOLID, podemos relajar esas dependencias y hacerlas mucho más flexibles a cambios.
+
+Te van a hacer entender mucho mejor las arquitecturas
+Siempre que hablo de arquitecturas, noto que hay una barrera importante para entender cómo aplicarlas y qué beneficios aportan.
+
+Esto es porque primero hace falta entender los principios sobre los que se sustentan, y los principios SOLID son muy importantes para ello.
+
+Simplifican la creación de tests
+Todo esto está muy relacionado con los puntos anteriores: si tienes tu código desacoplado y una buena arquitectura, los tests van a ser mucho más sencillos.
+
+########################################################
+QUE ES UN DISEÑO ARQUITECTONICO?
+########################################################
+
+La arquitectura de software es el diseño de más alto nivel de la estructura de un sistema.
+
+Una arquitectura de software, también llamada arquitectura lógica, consiste en un conjunto de patrones coherentes y abstracciones que proporcionan un marco definido y claro para interactuar con el código fuente del software.
+La arquitectura de un programa informático se selecciona y diseña en función de los objetivos (requisitos) y las limitaciones. Los objetivos son los prefijados para el sistema de información, pero no sólo los funcionales, sino también otros objetivos como el mantenimiento, la auditoría, la flexibilidad y la interacción con otros sistemas de información.
+ Las restricciones son las limitaciones derivadas de las tecnologías disponibles para aplicar los sistemas de información. Algunas arquitecturas son más aconsejables de implementar con ciertas tecnologías mientras que otras no son adecuadas para determinadas arquitecturas. Por ejemplo, no es factible utilizar una arquitectura de programas informáticos de tres niveles para implantar sistemas en tiempo real.
+
+La arquitectura de programas informáticos define, de manera abstracta, los componentes que realizan alguna tarea de cálculo, sus interfaces y la comunicación entre ellos. Toda arquitectura debe ser implementable en una arquitectura física, que consiste simplemente en determinar qué computadora se asignará a cada tarea.
+
+El diseño arquitectónico está vinculado a los objetivos establecidos para una aplicación web, al contenido que se presentará, a los usuarios que la visitarán y a la filosofía de navegación adoptada. Se debe identificar la arquitectura de contenido y la arquitectura de la aplicación web.
+
+La arquitectura de contenido se centra en la estructura de los objetos de contenido para la presentación y la navegación, su importancia radica en que denota estructuras que producen una mejor organización, etiquetado, navegación y búsqueda de los objetos de contenido.
+
+La arquitectura de la aplicación web se refiere a la forma en que la aplicación está estructurada para gestionar la interacción del usuario, manejar las tareas de procesamiento interno, navegar de forma eficiente y presentar el contenido. Se refiere a una infraestructura que permite que un sistema cumpla sus objetivos. Las aplicaciones deben construirse en capas para tener en cuenta diferentes preocupaciones, la arquitectura controlada por el modelo de vista es una de las sugeridas por su adaptabilidad en entornos interactivos.
+
+-Componentes de la arquitectura de software 
+
+La arquitectura del software consiste en:
+
+clientes y servidores.
+bases de datos.
+filtros.
+niveles en sistemas jerárquicos.
+Interacciones
+Entre los componentes de la arquitectura de software hay un conjunto de interacciones entre las que destacan :
+
+llamadas de procedimientos.
+comportamiento de las variables.
+protocolos cliente-servidor.
+transmisión asincrónica de eventos.
